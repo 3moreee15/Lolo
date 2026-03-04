@@ -1185,7 +1185,15 @@
         <img class="giftGif" src="dance2.gif" alt="راقصة 2">
       </div>
       <video id="loloVideo" src="lolo.mp4" preload="auto"
-        style="width:100%;border-radius:14px;margin-top:10px;display:block;max-height:480px;object-fit:cover;"
+        style="
+          display:block;
+          margin:12px auto 0;
+          width:min(100%, 340px);
+          aspect-ratio:9/16;
+          border-radius:18px;
+          object-fit:cover;
+          box-shadow:0 10px 32px rgba(26,127,212,.22);
+        "
         playsinline webkit-playsinline
         controls
       ></video>
@@ -1814,7 +1822,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }else{
           beep("escape");
-          showAgePopup("error", "🤔", "خطأ! احد بينسى عمره؟", 2500);
+          showAgePopup("error", "🫥", "خطأ! احد بينسى عمره؟", 2500);
           if(ageInput){ ageInput.value = ""; setTimeout(()=> ageInput.focus(), 300); }
         }
       }
