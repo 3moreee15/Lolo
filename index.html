@@ -1617,6 +1617,166 @@
   body.dark .ageUnit .ageLabel {
     color: #fff !important;
   }
+
+  /* ===== Dark mode - إصلاح عناصر اللعبة والنصوص ===== */
+  body.dark .gameStats {
+    background: linear-gradient(135deg, rgba(20,35,60,.90), rgba(10,22,44,.92));
+    border-color: rgba(100,180,255,.25);
+    color: #a8d4ff !important;
+  }
+  body.dark .gameStats span,
+  body.dark .gameStats b {
+    color: #a8d4ff !important;
+  }
+  body.dark .gameOverlay {
+    background: linear-gradient(180deg, rgba(8,18,40,.97), rgba(4,12,28,.96));
+  }
+  body.dark .gameOverlayTitle {
+    color: #7ec8ff !important;
+  }
+  body.dark .gameOverlayScore {
+    color: #a8d4ff !important;
+  }
+  body.dark .gameResultBox {
+    background: linear-gradient(135deg, rgba(20,35,60,.90), rgba(10,22,44,.85));
+    border-color: rgba(100,180,255,.22);
+  }
+  body.dark .gameResultNum {
+    color: #7ec8ff !important;
+  }
+  body.dark .gameResultLbl {
+    color: #a8d4ff !important;
+  }
+  body.dark .gameCanvas {
+    background: linear-gradient(160deg, rgba(8,18,40,.95), rgba(4,12,28,.95));
+    border-color: rgba(100,180,255,.25);
+  }
+
+  /* إصلاح أي نص داخل الكارد لم يتغطَّ */
+  body.dark .sheetTitle,
+  body.dark .sheetClose,
+  body.dark .themeName,
+  body.dark .themeBtn {
+    color: #e8f4ff !important;
+  }
+  body.dark .sheetClose {
+    background: rgba(20,35,60,.80);
+    border-color: rgba(255,255,255,.15);
+  }
+  body.dark .sheetHandle {
+    background: rgba(255,255,255,.22);
+  }
+
+  /* إصلاح النصوص الثابتة اللون */
+  body.dark .fileNote,
+  body.dark .hint,
+  body.dark .qSmall {
+    color: #a8d4ff !important;
+    opacity: 1 !important;
+  }
+  body.dark .ageClockTitle {
+    opacity: 1 !important;
+  }
+  body.dark .dot { background: rgba(100,180,255,.55); }
+  body.dark .dot.active { background: var(--accent2); }
+
+  /* toast في الدارك مود */
+  body.dark .toast {
+    background: rgba(8,18,36,.92) !important;
+    color: #e8f4ff !important;
+  }
+
+  /* دعم prefers-color-scheme تلقائي */
+  @media (prefers-color-scheme: dark) {
+    body:not(.light) {
+      --text: #e8f4ff;
+      --glass: rgba(10, 20, 40, .82);
+    }
+    body:not(.light) .sparkle{ opacity:.25; }
+    body:not(.light) .aurora{ opacity:.55; }
+    body:not(.light) #particles{ opacity:.55; }
+    body:not(.light) .bgGrid{ opacity:.18; }
+    body:not(.light) .bgNoise{ opacity:.12; }
+    body:not(.light) .waveWrap{ opacity:.55; }
+    body:not(.light) .badge,
+    body:not(.light) .quiz,
+    body:not(.light) .gift,
+    body:not(.light) .toast,
+    body:not(.light) .pillBtn{
+      background: rgba(8, 18, 36, .80);
+      border-color: rgba(255,255,255,.12);
+      color: #e8f4ff;
+    }
+    body:not(.light) .quiz *,
+    body:not(.light) .gift *,
+    body:not(.light) .card,
+    body:not(.light) .card p,
+    body:not(.light) .card span,
+    body:not(.light) .title,
+    body:not(.light) .title *,
+    body:not(.light) p.sub,
+    body:not(.light) .fileNote,
+    body:not(.light) .hint,
+    body:not(.light) .qText,
+    body:not(.light) .qSmall,
+    body:not(.light) #giftText {
+      color: #e8f4ff !important;
+    }
+    body:not(.light) .btn.secondary {
+      background: rgba(8, 18, 36, .80);
+      color: #a0c8f0;
+    }
+    body:not(.light) .heartBtn {
+      background: rgba(8, 18, 36, .80);
+      color: #e8f4ff;
+      border-color: rgba(255,255,255,.15);
+    }
+    body:not(.light) .ageInput {
+      background: rgba(8, 18, 36, .80);
+      color: #e8f4ff;
+      border-color: rgba(255,255,255,.12);
+    }
+    body:not(.light) .ageClock {
+      background: rgba(8, 18, 36, .80);
+      border-color: rgba(255,255,255,.12);
+    }
+    body:not(.light) .ageClockTitle,
+    body:not(.light) .ageUnit .ageNum,
+    body:not(.light) .ageUnit .ageLabel { color: #fff !important; }
+    body:not(.light) .gameStats {
+      background: linear-gradient(135deg, rgba(20,35,60,.90), rgba(10,22,44,.92));
+      border-color: rgba(100,180,255,.25);
+      color: #a8d4ff !important;
+    }
+    body:not(.light) .gameStats span,
+    body:not(.light) .gameStats b { color: #a8d4ff !important; }
+    body:not(.light) .gameOverlay {
+      background: linear-gradient(180deg, rgba(8,18,40,.97), rgba(4,12,28,.96));
+    }
+    body:not(.light) .gameOverlayTitle { color: #7ec8ff !important; }
+    body:not(.light) .gameOverlayScore { color: #a8d4ff !important; }
+    body:not(.light) .gameResultBox {
+      background: linear-gradient(135deg, rgba(20,35,60,.90), rgba(10,22,44,.85));
+      border-color: rgba(100,180,255,.22);
+    }
+    body:not(.light) .gameResultNum { color: #7ec8ff !important; }
+    body:not(.light) .gameResultLbl { color: #a8d4ff !important; }
+    body:not(.light) .sheet {
+      background: rgba(8, 16, 32, .90);
+      border-color: rgba(255,255,255,.12);
+    }
+    body:not(.light) .themeBtn {
+      background: rgba(8, 18, 36, .80);
+      border-color: rgba(255,255,255,.10);
+      color: #e8f4ff !important;
+    }
+    body:not(.light) .sheetTitle { color: #e8f4ff !important; opacity:1; }
+    body:not(.light) .sheetClose {
+      background: rgba(20,35,60,.80);
+      border-color: rgba(255,255,255,.15);
+      color: #e8f4ff !important;
+    }
+  }
 </style>
 </head>
 
@@ -1939,11 +2099,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ===== Dark mode: تحميل تلقائي حسب الجهاز أو التفضيل المحفوظ =====
+  (function initDarkMode(){
+    const saved = localStorage.getItem("lojain_theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = saved ? saved === "dark" : prefersDark;
+    if(isDark){
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+    }
+    const btn = $("toggleTheme");
+    if(btn) btn.textContent = isDark ? "☀️ الوضع" : "🌙 الوضع";
+  })();
+
   const toggleTheme = $("toggleTheme");
   if(toggleTheme){
     toggleTheme.addEventListener("click", ()=>{
-      document.body.classList.toggle("dark");
-      showToast(document.body.classList.contains("dark") ? "وضع داكن 🌙" : "وضع فاتح ☀️");
+      const nowDark = document.body.classList.toggle("dark");
+      document.body.classList.toggle("light", !nowDark);
+      localStorage.setItem("lojain_theme", nowDark ? "dark" : "light");
+      toggleTheme.textContent = nowDark ? "☀️ الوضع" : "🌙 الوضع";
+      showToast(nowDark ? "وضع داكن 🌙" : "وضع فاتح ☀️");
     });
   }
 
