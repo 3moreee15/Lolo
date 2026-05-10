@@ -584,12 +584,13 @@
     border-radius: 20px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    gap: 10px; z-index: 10;
+    gap: 6px; z-index: 10;
     backdrop-filter: blur(6px);
+    padding: 10px;
   }
   .gameOverlay.hidden{ display: none; }
-  .gameOverlayTitle{ font-size: 22px; font-weight: 950; color: var(--accent); }
-  .gameOverlayScore{ font-size: 15px; font-weight: 900; color: #2a6ab0; opacity: .9; }
+  .gameOverlayTitle{ font-size: clamp(15px, 4vw, 20px); font-weight: 950; color: #0d4a8a; }
+  .gameOverlayScore{ font-size: clamp(12px, 3vw, 14px); font-weight: 900; color: #1a5a9a; opacity: .95; }
   .gameResultGrid{
     display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
     margin: 6px 0;
@@ -1900,7 +1901,7 @@
               <div class="gameResultLbl">فاتتك</div>
             </div>
           </div>
-          <button class="btn primary" id="gameStartBtn" style="width:min(280px, 80%); font-size:clamp(13px,3.5vw,15px); padding:10px 14px; margin-top:6px;">ابدأي اللعبة 🚀</button>
+          <button class="btn primary" id="gameStartBtn" style="width:min(280px, 80%); font-size:clamp(13px,3.5vw,15px); padding:8px 14px; margin-top:6px; border-radius:14px;">ابدأي اللعبة 🚀</button>
         </div>
       </div>
       <div class="gameControls">
@@ -2456,7 +2457,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const girlsOptions = ["عائشة","جنى","ريماس","ميمونة","اسيل","سندس","سحر","غنى","قمر","جودي","ليلى"];
       answerArea.innerHTML = `
         <div id="girlsWrap" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%;position:relative;">
-          ${girlsOptions.map(name => `<button class="choiceBtn" data-val="${name}" style="padding:10px 20px;border-radius:999px;border:1.5px solid #f0b8d8;background:linear-gradient(135deg,#fff0f8,#ffd6ee);color:#c0386a;font-weight:900;cursor:pointer;font-size:14px;transition:all .18s cubic-bezier(.2,.9,.2,1);box-shadow:0 4px 14px rgba(220,100,160,.18),inset 0 1px 0 rgba(255,255,255,.6);letter-spacing:.02em;">${name}</button>`).join("")}
+          ${girlsOptions.map(name => `<button class="choiceBtn" data-val="${name}" style="padding:10px 20px;border-radius:999px;border:1.5px solid #e090b8;background:linear-gradient(135deg,#ffd6ee,#ffb8dc);color:#6b0d35;font-weight:900;cursor:pointer;font-size:14px;transition:all .18s cubic-bezier(.2,.9,.2,1);box-shadow:0 4px 14px rgba(220,100,160,.18),inset 0 1px 0 rgba(255,255,255,.6);letter-spacing:.02em;">${name}</button>`).join("")}
           <button id="hiddenKolG" data-val="الكل" style="
             padding:10px 16px;border-radius:999px;border:1.5px solid var(--border);
             background:linear-gradient(135deg,#fff,#e3f0ff);font-weight:900;cursor:pointer;font-size:14px;
